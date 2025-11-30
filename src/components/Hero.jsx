@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import defaultData from "../data/hero.json";
 import "../styles.css";
 
-// Minimal centered hero with night mode toggle
-// Inspired by typographic layouts
+// Apple-inspired minimalist hero section
+// Maximum whitespace, centered content, clean typography
 const Hero = ({ data = defaultData }) => {
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || "light"
@@ -27,8 +27,9 @@ const Hero = ({ data = defaultData }) => {
     <section
       role="banner"
       className="relative flex min-h-screen flex-col items-center justify-center bg-white text-gray-900 transition-colors duration-300 dark:bg-[#111111] dark:text-white"
+      style={{ padding: "var(--spacing-section-desktop) var(--spacing-lg)" }}
     >
-      {/* Night mode toggle */}
+      {/* Ultra-subtle theme toggle */}
       <button
         onClick={toggleTheme}
         role="switch"
@@ -36,34 +37,75 @@ const Hero = ({ data = defaultData }) => {
           theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"
         }
         aria-checked={theme === "dark"}
-        className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/70 text-xl shadow backdrop-blur-sm transition hover:shadow-md focus:outline-none dark:bg-[#222] dark:text-gray-100"
+        className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-transparent text-lg transition-all duration-200 hover:bg-black/5 focus:outline-none dark:hover:bg-white/10"
+        style={{ opacity: 0.4 }}
       >
         {theme === "dark" ? "☀️" : "🌙"}
       </button>
 
-      {/* Centered content */}
-      <div className="flex flex-col items-center justify-center space-y-3 text-center">
-        <h1 className="text-6xl font-extrabold tracking-tight sm:text-7xl">
+      {/* Centered hero content with maximum spacing */}
+      <div className="flex flex-col items-center justify-center text-center" style={{ maxWidth: "900px", padding: "0 var(--spacing-lg)" }}>
+        <h1
+          className="font-semibold tracking-tight"
+          style={{
+            fontSize: "clamp(3rem, 8vw, 5.5rem)",
+            lineHeight: "var(--leading-tight)",
+            marginBottom: "var(--spacing-md)",
+            letterSpacing: "-0.02em",
+            fontWeight: "var(--font-semibold)"
+          }}
+        >
           {data.title}
         </h1>
-        <h2 className="text-2xl font-semibold text-gray-500 dark:text-gray-400">
+
+        <h2
+          className="font-medium"
+          style={{
+            fontSize: "clamp(1.5rem, 3vw, 2rem)",
+            color: "var(--color-secondary)",
+            marginBottom: "var(--spacing-sm)",
+            fontWeight: "var(--font-medium)"
+          }}
+        >
           {data.name}
         </h2>
-        <h3 className="text-xl text-gray-500 dark:text-gray-400">
+
+        <h3
+          style={{
+            fontSize: "clamp(1.125rem, 2vw, 1.25rem)",
+            color: "var(--color-tertiary)",
+            marginBottom: "var(--spacing-xl)",
+            lineHeight: "var(--leading-loose)"
+          }}
+        >
           {data.role}
         </h3>
+
         {data.buttonText && (
           <a
             href={data.buttonLink}
-            className="mt-6 inline-block rounded-full bg-gradient-to-r from-zinc-200 to-zinc-300 px-6 py-2 text-sm font-medium text-gray-900 shadow transition hover:-translate-y-0.5 hover:shadow-lg active:scale-95 dark:from-zinc-700 dark:to-zinc-600 dark:text-gray-100"
+            className="btn"
+            style={{
+              marginTop: "var(--spacing-lg)",
+              padding: "0.875rem 2rem",
+              fontSize: "var(--text-base)",
+              fontWeight: "var(--font-medium)"
+            }}
           >
             {data.buttonText}
           </a>
         )}
       </div>
 
-      {/* Bottom gradient connector */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-white/0 via-zinc-100/70 to-zinc-200 blur-2xl dark:from-[#11111100] dark:via-[#111111b3] dark:to-[#111111]" />
+      {/* Subtle bottom gradient for section transition */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0"
+        style={{
+          height: "120px",
+          background: "linear-gradient(to bottom, transparent, rgba(250, 251, 252, 0.3))",
+          opacity: 0.6
+        }}
+      />
     </section>
   );
 };
