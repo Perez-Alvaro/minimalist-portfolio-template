@@ -1,0 +1,205 @@
+{
+  "hero": {
+    "title": "PORTFOLIO",
+    "name": "Álvaro Perez",
+    "role": "Estudiante de Ing. en Sistemas",
+    "buttonText": "Ver proyectos",
+    "buttonLink": "#projects"
+  },
+  "about": {
+    "tag": "Sobre mí",
+    "title": "Conóceme",
+    "description": "Soy Álvaro Perez, estudiante avanzado de Ingeniería en Sistemas en UTN FRC. Me gusta combinar tecnología y creatividad para crear soluciones eficientes.",
+    "buttonText": "Descargar CV",
+    "buttonLink": "#"
+  },
+  "skills": [
+    { "title": "React", "category": "Frontend", "icon": "⚛️", "level": "Avanzado", "type": "herramienta" },
+    { "title": "Node.js", "category": "Backend", "icon": "🟢", "level": "Intermedio", "type": "herramienta" },
+    { "title": "Python", "category": "Lenguaje", "icon": "🐍", "level": "Avanzado", "type": "herramienta" },
+    { "title": "SQL", "category": "Base de Datos", "icon": "🗃️", "level": "Intermedio", "type": "herramienta" },
+    { "title": "Docker", "category": "DevOps", "icon": "🐳", "level": "Básico", "type": "herramienta" },
+    { "title": "Git", "category": "Control de Versiones", "icon": "🔧", "level": "Avanzado", "type": "herramienta" },
+    { "title": "UX/UI", "category": "Diseño", "icon": "🎨", "level": "Intermedio", "type": "habilidad" },
+    { "title": "Gestión de Mejora de Procesos", "category": "Management", "icon": "📈", "level": "Avanzado", "type": "habilidad" },
+    { "title": "Trabajo en Equipo", "category": "Soft Skill", "icon": "🤝", "level": "Avanzado", "type": "habilidad" },
+    { "title": "Comunicación Efectiva", "category": "Soft Skill", "icon": "🗣️", "level": "Avanzado", "type": "habilidad" }
+  ],
+  "projects": [
+    {
+      "id": "automatizacion-invernaderos",
+      "title": "Automatización de invernaderos",
+      "summary": "Control climático con sensores y Arduino.",
+      "description": "Sistema completo para monitorizar y ajustar temperatura, humedad y riego mediante una aplicación web.",
+      "tags": ["Arduino", "Python", "IoT"],
+      "coverImage": {
+        "url": "/assets/projects/automatizacion-invernaderos/cover.jpg",
+        "alt": "Invernadero con sensores"
+      },
+      "gallery": [
+        { "url": "/assets/projects/automatizacion-invernaderos/shot-1.png", "alt": "Panel de control" },
+        { "url": "/assets/projects/automatizacion-invernaderos/shot-2.png", "alt": "Placa Arduino con cables" }
+      ],
+      "links": {
+        "deploy": "https://mi-sitio.com/invernaderos",
+        "repo": "https://github.com/usuario/invernaderos"
+      },
+      "meta": {
+        "role": "Fullstack",
+        "timeline": "Ene–Mar 2024",
+        "status": "online",
+        "impact": "↓20% consumo de agua"
+      }
+    },
+    {
+      "id": "planificador-proyectos",
+      "title": "Planificador de Proyectos",
+      "summary": "Organización ágil para equipos remotos.",
+      "description": "Aplicación colaborativa para asignar tareas, establecer hitos y visualizar avances en tiempo real.",
+      "tags": ["React", "Firebase"],
+      "coverImage": {
+        "url": "/assets/projects/planificador-proyectos/cover.jpg",
+        "alt": "Tablero de planificación"
+      },
+      "gallery": [],
+      "links": {
+        "repo": "https://github.com/usuario/planificador"
+      },
+      "meta": {
+        "role": "Frontend",
+        "timeline": "May–Jul 2024",
+        "status": "online",
+        "impact": "↑40% productividad"
+      }
+    },
+    {
+      "id": "prototipador-ux",
+      "title": "Prototipador UX",
+      "summary": "Librería de componentes reutilizables en Figma.",
+      "description": "Kit de interfaz diseñado para acelerar el proceso de prototipado y pruebas de usabilidad.",
+      "tags": ["Figma", "UX Research"],
+      "coverImage": {
+        "url": "/assets/projects/prototipador-ux/cover.jpg",
+        "alt": "Pantallas de un prototipo"
+      },
+      "gallery": [
+        { "url": "/assets/projects/prototipador-ux/shot-1.png", "alt": "Componentes en Figma" }
+      ],
+      "links": {},
+      "meta": {
+        "role": "UX/UI",
+        "timeline": "Ago–Sep 2024",
+        "status": "coming",
+        "impact": "Próximo"
+      }
+    }
+  ],
+  "experience": [
+    {
+      "year": "2024",
+      "role": "Pasantía en Paason",
+      "description": "Desarrollo de prototipos y automatizaciones con Python y Arduino."
+    },
+    {
+      "year": "2023",
+      "role": "Proyecto freelance",
+      "description": "Implementación de sistemas de monitoreo remoto para equipos industriales."
+    }
+  ],
+  "education": [
+    {"year": "2022 - Presente", "title": "Ing. en Sistemas", "institution": "Universidad Tecnológica Nacional FRC"},
+    {"year": "2024", "title": "Curso Diseño UX/UI", "institution": "Coderhouse"},
+    {"year": "2023", "title": "Curso Business Analytics", "institution": "Coderhouse"},
+    {"year": "2016 - 2021", "title": "Secundaria Técnica en Automatización de Procesos", "institution": "Instituto Tecnológico del Comahue"}
+  ],
+  "contact": {
+    "email": "perezalvaroraul26@gmail.com",
+    "phone": "+54 299 6086076",
+    "location": "Córdoba, Argentina",
+    "social": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/alvaroperez" },
+      { "label": "GitHub", "url": "https://github.com/Perez-Alvaro" },
+      { "label": "Email", "url": "mailto:perezalvarozul24@gmail.com" }
+    ]
+  },
+  "navbar": {
+    "links": [
+      { "label": "Sobre mí", "url": "#about" },
+      { "label": "Habilidades", "url": "#skills" },
+      { "label": "Proyectos", "url": "#projects" },
+      { "label": "Experiencia", "url": "#experiencia" },
+      { "label": "Educación", "url": "#educacion" },
+      { "label": "Contacto", "url": "#contact" }
+    ]
+  },
+  "footer": {
+    "companyName": "Álvaro Perez",
+    "description": "Portafolio profesional de Álvaro Perez centrado en automatización y UX/UI.",
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/alvaroperez" },
+      { "label": "GitHub", "url": "https://github.com/alvaroperez" },
+      { "label": "Email", "url": "mailto:perezalvarozul24@gmail.com" }
+    ],
+    "copyright": "© 2025 Álvaro Perez"
+  },
+  "features": [
+    {
+      "title": "Front-End Development",
+      "description": "Building responsive interfaces with React.",
+      "icon": "🖥️"
+    },
+    {
+      "title": "Back-End Development",
+      "description": "Creating robust APIs with Node.js and Express.",
+      "icon": "⚙️"
+    },
+    {
+      "title": "UI/UX Design",
+      "description": "Designing modern experiences in Figma.",
+      "icon": "🎨"
+    }
+  ],
+  "steps": [
+    {
+      "step": "1",
+      "title": "Prototipado y descubrimiento",
+      "description": "Detecto necesidades y diseño centrado en el usuario.",
+      "icon": "FiSearch"
+    },
+    {
+      "step": "2",
+      "title": "Desarrollo ágil",
+      "description": "Creo un MVP funcional para validar rápidamente.",
+      "icon": "FiTool"
+    },
+    {
+      "step": "3",
+      "title": "Iteración continua",
+      "description": "Mejoro y optimizo en base a feedback real.",
+      "icon": "FiRefreshCw"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Matias Ortiz",
+      "text": "Trabajar con Álvaro fue muy sencillo y cumplió con todos los objetivos del proyecto.",
+      "avatar": "/assets/mati.png"
+    },
+    {
+      "name": "Gaston Oteiza",
+      "text": "Su enfoque creativo y habilidades técnicas mejoraron nuestro equipo.",
+      "avatar": "/assets/gasti.png"
+    },
+    {
+      "name": "Making SRL – Ensayos No Destructivos",
+      "text": "Profesional comprometido y resolutivo. Superó nuestras expectativas.",
+      "avatar": "/assets/making.png"
+    }
+  ],
+  "finalSection": {
+    "title": "¿Listo para crear algo increíble juntos?",
+    "description": "Estoy abierto a nuevas oportunidades y me encantaría escuchar tu proyecto o idea.",
+    "buttonText": "Escríbeme",
+    "buttonLink": "mailto:perezalvarozul24@gmail.com?subject=Oportunidad%20Laboral&body=Hola%20%C3%81lvaro,%20quisiera..."
+  }
+}

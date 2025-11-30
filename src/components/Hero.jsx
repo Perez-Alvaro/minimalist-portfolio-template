@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import defaultData from "../data/hero.json";
+import portfolioData from "../data";
 import "../styles.css";
 
 // Apple-inspired minimalist hero section
 // Maximum whitespace, centered content, clean typography
-const Hero = ({ data = defaultData }) => {
+const Hero = ({ data = portfolioData.hero }) => {
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || "light"
   );
@@ -26,7 +26,7 @@ const Hero = ({ data = defaultData }) => {
   return (
     <section
       role="banner"
-      className="relative flex min-h-screen flex-col items-center justify-center bg-white text-gray-900 transition-colors duration-300 dark:bg-[#111111] dark:text-white"
+      className="hero-section relative flex min-h-screen flex-col items-center justify-center bg-white text-gray-900 transition-colors duration-300 dark:bg-[#111111] dark:text-white"
       style={{ padding: "var(--spacing-section-desktop) var(--spacing-lg)" }}
     >
       {/* Ultra-subtle theme toggle */}
@@ -44,38 +44,43 @@ const Hero = ({ data = defaultData }) => {
       </button>
 
       {/* Centered hero content with maximum spacing */}
-      <div className="flex flex-col items-center justify-center text-center" style={{ maxWidth: "900px", padding: "0 var(--spacing-lg)" }}>
+      <div className="hero-content flex flex-col items-center justify-center text-center" style={{ maxWidth: "900px", padding: "0 var(--spacing-lg)" }}>
         <h1
-          className="font-semibold tracking-tight"
+          className="hero-title font-bold tracking-tight"
           style={{
-            fontSize: "clamp(3rem, 8vw, 5.5rem)",
-            lineHeight: "var(--leading-tight)",
+            fontSize: "clamp(3.5rem, 10vw, 6.5rem)",
+            lineHeight: "0.95",
             marginBottom: "var(--spacing-md)",
-            letterSpacing: "-0.02em",
-            fontWeight: "var(--font-semibold)"
+            letterSpacing: "-0.03em",
+            fontWeight: "700"
           }}
         >
           {data.title}
         </h1>
 
         <h2
-          className="font-medium"
+          className="hero-subtitle font-medium"
           style={{
             fontSize: "clamp(1.5rem, 3vw, 2rem)",
-            color: "var(--color-secondary)",
+            color: "#6B7280",
             marginBottom: "var(--spacing-sm)",
-            fontWeight: "var(--font-medium)"
+            fontWeight: "500",
+            letterSpacing: "-0.01em"
           }}
         >
           {data.name}
         </h2>
 
         <h3
+          className="hero-description"
           style={{
             fontSize: "clamp(1.125rem, 2vw, 1.25rem)",
-            color: "var(--color-tertiary)",
+            color: "#9CA3AF",
             marginBottom: "var(--spacing-xl)",
-            lineHeight: "var(--leading-loose)"
+            lineHeight: "1.8",
+            maxWidth: "32rem",
+            marginLeft: "auto",
+            marginRight: "auto"
           }}
         >
           {data.role}
@@ -84,12 +89,12 @@ const Hero = ({ data = defaultData }) => {
         {data.buttonText && (
           <a
             href={data.buttonLink}
-            className="btn"
+            className="btn hero-btn"
             style={{
               marginTop: "var(--spacing-lg)",
-              padding: "0.875rem 2rem",
-              fontSize: "var(--text-base)",
-              fontWeight: "var(--font-medium)"
+              padding: "1rem 2.5rem",
+              fontSize: "1.0625rem",
+              fontWeight: "600"
             }}
           >
             {data.buttonText}

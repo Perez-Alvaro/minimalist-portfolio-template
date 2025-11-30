@@ -1,9 +1,8 @@
 import React from "react";
-import expData from "../data/experience.json";
-import eduData from "../data/education.json";
+import portfolioData from "../data";
 import "../styles.css";
 
-const Career = ({ experience = expData, education = eduData }) => (
+const Career = ({ experience = portfolioData.experience, education = portfolioData.education }) => (
   <>
     <section className="career-section fade-in" id="experiencia">
       <div className="career-container single">

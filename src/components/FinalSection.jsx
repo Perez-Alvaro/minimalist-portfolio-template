@@ -1,8 +1,8 @@
 import React from "react";
-import defaultData from "../data/finalSection.json";
+import portfolioData from "../data";
 import "../styles.css";
 
-const FinalSection = ({ data = defaultData }) => {
+const FinalSection = ({ data = portfolioData.finalSection }) => {
   return (
 
     <section className="final-section fade-in relative" id="contact">

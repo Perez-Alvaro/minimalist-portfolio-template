@@ -1,5 +1,5 @@
 import React from "react";
-import defaultData from "../data/footer.json";
+import portfolioData from "../data";
 
 const icons = {
   LinkedIn: "/assets/linkedin.svg",
@@ -7,7 +7,7 @@ const icons = {
   Email: "/assets/mail.svg",
 };
 
-const Footer = ({ data = defaultData }) => {
+const Footer = ({ data = portfolioData.footer }) => {
   return (
     <footer className="footer-section fade-in">
       <div className="footer-container">

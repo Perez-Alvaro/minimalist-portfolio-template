@@ -1,7 +1,7 @@
 import React from "react";
-import defaultData from "../data/features.json";
+import portfolioData from "../data";
 
-const Features = ({ data = defaultData }) => {
+const Features = ({ data = portfolioData.features }) => {
   return (
     <section className="features-section">
       <div className="features-container">

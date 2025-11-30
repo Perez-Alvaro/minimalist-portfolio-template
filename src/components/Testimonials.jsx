@@ -1,8 +1,8 @@
 import React from "react";
-import defaultData from "../data/testimonials.json";
+import portfolioData from "../data";
 import "../styles.css";
 
-const Testimonials = ({ data = defaultData }) => {
+const Testimonials = ({ data = portfolioData.testimonials }) => {
   return (
     <section className="testimonials-section fade-in" id="testimonials">
       <div className="testimonials-container">

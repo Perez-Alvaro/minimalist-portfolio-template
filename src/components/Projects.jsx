@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import defaultData from "../data/projects.json";
+import portfolioData from "../data";
 import ProjectModal from "./ProjectModal";
 import "../styles.css";
 
-const Projects = ({ data = defaultData }) => {
+const Projects = ({ data = portfolioData.projects }) => {
   const [selected, setSelected] = useState(null);
   const originRef = useRef(null);
 

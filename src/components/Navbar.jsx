@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import defaultData from "../data/navbar.json";
+import portfolioData from "../data";
 import "../styles.css";
 
-const Navbar = ({ data = defaultData }) => {
+const Navbar = ({ data = portfolioData.navbar }) => {
   const [activeSection, setActiveSection] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
 

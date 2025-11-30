@@ -1,6 +1,6 @@
 import React from "react";
 import * as FiIcons from "react-icons/fi";
-import defaultData from "../data/steps.json";
+import portfolioData from "../data";
 
 const titleStyle = {
   textAlign: "center",
@@ -10,7 +10,7 @@ const titleStyle = {
 
 const highlight = "#CBFF00";
 
-const Steps = ({ data = defaultData }) => {
+const Steps = ({ data = portfolioData.steps }) => {
   return (
     <section className="steps-section" id="steps">
       <h2 style={titleStyle}>Resumen de tu progreso</h2>
