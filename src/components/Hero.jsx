@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import portfolioData from "../data";
+import Iridescence from "./Iridescence";
 import "../styles.css";
 
 // Apple-inspired minimalist hero section
@@ -29,6 +30,18 @@ const Hero = ({ data = portfolioData.hero }) => {
       className="hero-section relative flex min-h-screen flex-col items-center justify-center bg-white text-gray-900 transition-colors duration-300 dark:bg-[#111111] dark:text-white"
       style={{ padding: "var(--spacing-section-desktop) var(--spacing-lg)" }}
     >
+      {/* Iridescence background effect - theme-aware */}
+      <Iridescence
+        color={theme === "dark" ? [0.3, 0.4, 0.6] : [0.4, 0.7, 0.9]}
+        speed={0.5}
+        amplitude={0.15}
+        mouseReact={true}
+        style={{
+          opacity: theme === "dark" ? 0.15 : 0.25,
+          mixBlendMode: theme === "dark" ? "screen" : "multiply"
+        }}
+      />
+
       {/* Ultra-subtle theme toggle */}
       <button
         onClick={toggleTheme}
@@ -38,13 +51,13 @@ const Hero = ({ data = portfolioData.hero }) => {
         }
         aria-checked={theme === "dark"}
         className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-transparent text-lg transition-all duration-200 hover:bg-black/5 focus:outline-none dark:hover:bg-white/10"
-        style={{ opacity: 0.4 }}
+        style={{ opacity: 0.4, zIndex: 10 }}
       >
         {theme === "dark" ? "☀️" : "🌙"}
       </button>
 
       {/* Centered hero content with maximum spacing */}
-      <div className="hero-content flex flex-col items-center justify-center text-center" style={{ maxWidth: "900px", padding: "0 var(--spacing-lg)" }}>
+      <div className="hero-content flex flex-col items-center justify-center text-center" style={{ maxWidth: "900px", padding: "0 var(--spacing-lg)", position: "relative", zIndex: 2 }}>
         <h1
           className="hero-title font-bold tracking-tight"
           style={{

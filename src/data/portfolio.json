@@ -1,109 +1,167 @@
 {
   "hero": {
-    "title": "PORTFOLIO",
-    "name": "Álvaro Perez",
-    "role": "Estudiante de Ing. en Sistemas",
+    "title": "Hola, soy Álvaro",
+    "name": "Estudiante de Ing. en Sistemas de Información",
+    "subtitle": "Frontend Developer & Analista Funcional",
+    "role": "Frontend Developer & Analista Funcional",
+    "description": "Me apasiona trabajar en equipo, liderar proyectos y construir experiencias digitales enfocadas en el usuario.",
     "buttonText": "Ver proyectos",
-    "buttonLink": "#projects"
+    "buttonLink": "#projects",
+    "cta": "Ver proyectos",
+    "ctaHref": "#projects",
+    "secondaryCta": "Contactar",
+    "secondaryCtaHref": "#contact"
   },
   "about": {
     "tag": "Sobre mí",
-    "title": "Conóceme",
-    "description": "Soy Álvaro Perez, estudiante avanzado de Ingeniería en Sistemas en UTN FRC. Me gusta combinar tecnología y creatividad para crear soluciones eficientes.",
+    "title": "Sobre mí",
+    "content": "Soy estudiante de Ingeniería en Sistemas de Información con experiencia en desarrollo frontend, análisis funcional y diseño UX/UI. Me gusta integrar tecnología con diseño centrado en el usuario para crear soluciones reales.",
+    "description": "Soy estudiante de Ingeniería en Sistemas de Información con experiencia en desarrollo frontend, análisis funcional y diseño UX/UI. Me gusta integrar tecnología con diseño centrado en el usuario para crear soluciones reales.",
     "buttonText": "Descargar CV",
     "buttonLink": "#"
   },
   "skills": [
-    { "title": "React", "category": "Frontend", "icon": "⚛️", "level": "Avanzado", "type": "herramienta" },
-    { "title": "Node.js", "category": "Backend", "icon": "🟢", "level": "Intermedio", "type": "herramienta" },
-    { "title": "Python", "category": "Lenguaje", "icon": "🐍", "level": "Avanzado", "type": "herramienta" },
-    { "title": "SQL", "category": "Base de Datos", "icon": "🗃️", "level": "Intermedio", "type": "herramienta" },
-    { "title": "Docker", "category": "DevOps", "icon": "🐳", "level": "Básico", "type": "herramienta" },
-    { "title": "Git", "category": "Control de Versiones", "icon": "🔧", "level": "Avanzado", "type": "herramienta" },
-    { "title": "UX/UI", "category": "Diseño", "icon": "🎨", "level": "Intermedio", "type": "habilidad" },
-    { "title": "Gestión de Mejora de Procesos", "category": "Management", "icon": "📈", "level": "Avanzado", "type": "habilidad" },
-    { "title": "Trabajo en Equipo", "category": "Soft Skill", "icon": "🤝", "level": "Avanzado", "type": "habilidad" },
-    { "title": "Comunicación Efectiva", "category": "Soft Skill", "icon": "🗣️", "level": "Avanzado", "type": "habilidad" }
+    { "name": "React JS", "title": "React JS", "category": "Frontend", "icon": "⚛️", "level": "Intermedio", "type": "herramienta" },
+    { "name": "JavaScript", "title": "JavaScript", "category": "Lenguaje", "icon": "🟨", "level": "Avanzado", "type": "herramienta" },
+    { "name": "HTML", "title": "HTML", "category": "Frontend", "icon": "📄", "level": "Avanzado", "type": "herramienta" },
+    { "name": "CSS", "title": "CSS", "category": "Frontend", "icon": "🎨", "level": "Avanzado", "type": "herramienta" },
+    { "name": "SQL Server", "title": "SQL Server", "category": "Base de Datos", "icon": "🗄️", "level": "Intermedio", "type": "herramienta" },
+    { "name": "Python", "title": "Python", "category": "Lenguaje", "icon": "🐍", "level": "Intermedio", "type": "herramienta" },
+    { "name": "Sequelize ORM", "title": "Sequelize ORM", "category": "Backend", "icon": "🔗", "level": "Intermedio", "type": "herramienta" },
+    { "name": "Metodologías Ágiles", "title": "Metodologías Ágiles", "category": "Management", "icon": "⚙️", "level": "Intermedio", "type": "habilidad" },
+    { "name": "Node.js", "title": "Node.js", "category": "Backend", "icon": "🟢", "level": "Intermedio", "type": "herramienta" },
+    { "name": "Figma", "title": "Figma", "category": "Diseño", "icon": "🎯", "level": "Avanzado", "type": "herramienta" }
   ],
   "projects": [
     {
-      "id": "automatizacion-invernaderos",
-      "title": "Automatización de invernaderos",
-      "summary": "Control climático con sensores y Arduino.",
-      "description": "Sistema completo para monitorizar y ajustar temperatura, humedad y riego mediante una aplicación web.",
-      "tags": ["Arduino", "Python", "IoT"],
+      "id": "project-1",
+      "name": "Fitter",
+      "title": "Fitter",
+      "summary": "Sistema web que automatiza la venta y entrega de planes de entrenamiento predefinidos.",
+      "description": "Sistema web que automatiza la venta y entrega de planes de entrenamiento predefinidos.",
+      "tags": ["React", "Node.js", "UI/UX"],
+      "image": "/card---element-desktop.png",
       "coverImage": {
-        "url": "/assets/projects/automatizacion-invernaderos/cover.jpg",
-        "alt": "Invernadero con sensores"
-      },
-      "gallery": [
-        { "url": "/assets/projects/automatizacion-invernaderos/shot-1.png", "alt": "Panel de control" },
-        { "url": "/assets/projects/automatizacion-invernaderos/shot-2.png", "alt": "Placa Arduino con cables" }
-      ],
-      "links": {
-        "deploy": "https://mi-sitio.com/invernaderos",
-        "repo": "https://github.com/usuario/invernaderos"
-      },
-      "meta": {
-        "role": "Fullstack",
-        "timeline": "Ene–Mar 2024",
-        "status": "online",
-        "impact": "↓20% consumo de agua"
-      }
-    },
-    {
-      "id": "planificador-proyectos",
-      "title": "Planificador de Proyectos",
-      "summary": "Organización ágil para equipos remotos.",
-      "description": "Aplicación colaborativa para asignar tareas, establecer hitos y visualizar avances en tiempo real.",
-      "tags": ["React", "Firebase"],
-      "coverImage": {
-        "url": "/assets/projects/planificador-proyectos/cover.jpg",
-        "alt": "Tablero de planificación"
+        "url": "/card---element-desktop.png",
+        "alt": "Fitter - Sistema de planes de entrenamiento"
       },
       "gallery": [],
+      "href": "https://mz-plan-selector.vercel.app/",
       "links": {
-        "repo": "https://github.com/usuario/planificador"
+        "deploy": "https://mz-plan-selector.vercel.app/",
+        "repo": ""
       },
+      "featured": true,
       "meta": {
-        "role": "Frontend",
-        "timeline": "May–Jul 2024",
+        "role": "Fullstack",
+        "timeline": "2024",
         "status": "online",
-        "impact": "↑40% productividad"
+        "impact": "Automatización de ventas"
       }
     },
     {
-      "id": "prototipador-ux",
-      "title": "Prototipador UX",
-      "summary": "Librería de componentes reutilizables en Figma.",
-      "description": "Kit de interfaz diseñado para acelerar el proceso de prototipado y pruebas de usabilidad.",
-      "tags": ["Figma", "UX Research"],
+      "id": "project-2",
+      "name": "Clare",
+      "title": "Clare",
+      "summary": "Landing page y ecommerce para emprendimiento de santería.",
+      "description": "Landing page y ecommerce para emprendimiento de santería. Sistema completo de catálogo, carrito de compras y gestión de productos.",
+      "tags": ["React", "Ecommerce", "UI/UX"],
+      "image": "/card---element-desktop-2.png",
       "coverImage": {
-        "url": "/assets/projects/prototipador-ux/cover.jpg",
-        "alt": "Pantallas de un prototipo"
+        "url": "/card---element-desktop-2.png",
+        "alt": "Clare - Ecommerce de santería"
       },
-      "gallery": [
-        { "url": "/assets/projects/prototipador-ux/shot-1.png", "alt": "Componentes en Figma" }
-      ],
-      "links": {},
+      "gallery": [],
+      "href": "https://clarehm.vercel.app/",
+      "links": {
+        "deploy": "https://clarehm.vercel.app/",
+        "repo": ""
+      },
+      "featured": true,
+      "meta": {
+        "role": "Frontend",
+        "timeline": "2024",
+        "status": "online",
+        "impact": "Ecommerce completo"
+      }
+    },
+    {
+      "id": "project-3",
+      "name": "Prototipo funcional GRIND",
+      "title": "Prototipo funcional GRIND",
+      "summary": "Proyecto UX/UI de diseño de interfaces mobile Android.",
+      "description": "Proyecto UX/UI de diseño de interfaces mobile Android, uso de wireframes, UI kit y diseño centrado en el usuario.",
+      "tags": ["Canva", "Figma", "Diseño de producto", "UX/UI"],
+      "image": "/card---element-desktop-1.png",
+      "coverImage": {
+        "url": "/card---element-desktop-1.png",
+        "alt": "GRIND - Prototipo UX/UI"
+      },
+      "gallery": [],
+      "href": "https://drive.google.com/file/d/1Zfhv2kR-a66dWleaLjQnvl9VZ3hdacrt/view?usp=sharing",
+      "links": {
+        "deploy": "https://drive.google.com/file/d/1Zfhv2kR-a66dWleaLjQnvl9VZ3hdacrt/view?usp=sharing",
+        "repo": ""
+      },
+      "featured": false,
       "meta": {
         "role": "UX/UI",
-        "timeline": "Ago–Sep 2024",
-        "status": "coming",
-        "impact": "Próximo"
+        "timeline": "2024",
+        "status": "online",
+        "impact": "Prototipo móvil"
+      }
+    },
+    {
+      "id": "project-4",
+      "name": "HydroSense",
+      "title": "HydroSense",
+      "summary": "Dashboard operacional para un sistema hidropónico.",
+      "description": "Dashboard operacional para un sistema hidropónico que permite monitorear y controlar los parámetros del sistema utilizando sensores IOT.",
+      "tags": ["React", "IoT", "Arduino", "Node.js", "Express", "SQLite"],
+      "image": "/image-254.png",
+      "coverImage": {
+        "url": "/image-254.png",
+        "alt": "HydroSense - Sistema hidropónico"
+      },
+      "gallery": [],
+      "href": "https://github.com/Perez-Alvaro/hdt-proto0",
+      "links": {
+        "deploy": "",
+        "repo": "https://github.com/Perez-Alvaro/hdt-proto0"
+      },
+      "featured": false,
+      "meta": {
+        "role": "Fullstack",
+        "timeline": "2024",
+        "status": "online",
+        "impact": "IoT y monitoreo"
       }
     }
   ],
   "experience": [
     {
-      "year": "2024",
-      "role": "Pasantía en Paason",
-      "description": "Desarrollo de prototipos y automatizaciones con Python y Arduino."
+      "year": "Mayo 2025 - Actualidad",
+      "title": "Analista Funcional y Frontend",
+      "company": "Freelance",
+      "period": "Mayo 2025 - Actualidad",
+      "role": "Analista Funcional y Frontend",
+      "description": "Desarrollo web y diseño orientado a la creación de productos funcionales."
     },
     {
-      "year": "2023",
-      "role": "Proyecto freelance",
-      "description": "Implementación de sistemas de monitoreo remoto para equipos industriales."
+      "year": "Marzo 2020 - Mayo 2022",
+      "title": "Soporte técnico HW/SW",
+      "company": "Alphatech - Emprendimiento",
+      "period": "Marzo 2020 - Mayo 2022",
+      "role": "Soporte técnico HW/SW",
+      "description": "Reparación y mantenimiento de notebooks y PC, mejorando análisis técnico y resolución de problemas."
+    },
+    {
+      "year": "Ago 2021 - Nov 2021",
+      "title": "Pasante",
+      "company": "Pason Systems Inc.",
+      "period": "Ago 2021 - Nov 2021",
+      "role": "Pasante",
+      "description": "Desarrollo de prototipo con encoder incremental para medición angular."
     }
   ],
   "education": [
@@ -112,14 +170,30 @@
     {"year": "2023", "title": "Curso Business Analytics", "institution": "Coderhouse"},
     {"year": "2016 - 2021", "title": "Secundaria Técnica en Automatización de Procesos", "institution": "Instituto Tecnológico del Comahue"}
   ],
+  "social": [
+    {
+      "name": "GitHub",
+      "href": "https://github.com/Perez-Alvaro",
+      "icon": "🐙",
+      "color": "#333"
+    },
+    {
+      "name": "LinkedIn",
+      "href": "https://linkedin.com/in/alvaro-perez-912439268",
+      "icon": "💼",
+      "color": "#0077B5"
+    }
+  ],
   "contact": {
+    "title": "¿Hablamos?",
+    "subtitle": "Disponible para proyectos y colaboraciones",
     "email": "perezalvaroraul26@gmail.com",
     "phone": "+54 299 6086076",
     "location": "Córdoba, Argentina",
     "social": [
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/alvaroperez" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/alvaro-perez-912439268" },
       { "label": "GitHub", "url": "https://github.com/Perez-Alvaro" },
-      { "label": "Email", "url": "mailto:perezalvarozul24@gmail.com" }
+      { "label": "Email", "url": "mailto:perezalvaroraul26@gmail.com" }
     ]
   },
   "navbar": {
@@ -136,9 +210,9 @@
     "companyName": "Álvaro Perez",
     "description": "Portafolio profesional de Álvaro Perez centrado en automatización y UX/UI.",
     "links": [
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/alvaroperez" },
-      { "label": "GitHub", "url": "https://github.com/alvaroperez" },
-      { "label": "Email", "url": "mailto:perezalvarozul24@gmail.com" }
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/alvaro-perez-912439268" },
+      { "label": "GitHub", "url": "https://github.com/Perez-Alvaro" },
+      { "label": "Email", "url": "mailto:perezalvaroraul26@gmail.com" }
     ],
     "copyright": "© 2025 Álvaro Perez"
   },
@@ -200,6 +274,6 @@
     "title": "¿Listo para crear algo increíble juntos?",
     "description": "Estoy abierto a nuevas oportunidades y me encantaría escuchar tu proyecto o idea.",
     "buttonText": "Escríbeme",
-    "buttonLink": "mailto:perezalvarozul24@gmail.com?subject=Oportunidad%20Laboral&body=Hola%20%C3%81lvaro,%20quisiera..."
+    "buttonLink": "mailto:perezalvaroraul26@gmail.com?subject=Oportunidad%20Laboral&body=Hola%20%C3%81lvaro,%20quisiera..."
   }
 }

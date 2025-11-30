@@ -1,47 +1,107 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import portfolioData from "../data";
-import ProjectModal from "./ProjectModal";
 import "../styles.css";
 
 const Projects = ({ data = portfolioData.projects }) => {
-  const [selected, setSelected] = useState(null);
-  const originRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (project, button) => {
-    setSelected(project);
-    originRef.current = button;
+  const nextProject = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
   };
 
-  const closeModal = () => {
-    setSelected(null);
-    originRef.current?.focus();
+  const prevProject = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
   };
+
+  const goToProject = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const currentProject = data[currentIndex];
 
   return (
     <section className="projects-section fade-in" id="projects">
-      <div className="projects-container">
-        {data.map((project, index) => (
-          <div key={index} className="project-card">
-            <img
-              src={project.coverImage.url}
-              alt={project.coverImage.alt}
-              className="project-image"
-              loading="lazy"
-            />
-            <h3 className="project-title">{project.title}</h3>
-            <p className="project-description">{project.summary}</p>
+      <div className="carousel-container">
+        <h2 className="section-title">Proyectos Destacados</h2>
 
-            <button
-              className="btn project-link"
-              onClick={(e) => openModal(project, e.currentTarget)}
-              disabled={project.meta.status !== "online"}
-            >
-              Ver proyecto<span className="icon">→</span>
-            </button>
+        {/* Carousel wrapper */}
+        <div className="carousel-wrapper">
+          {/* Navigation arrows */}
+          <button
+            className="carousel-nav carousel-nav-prev"
+            onClick={prevProject}
+            aria-label="Proyecto anterior"
+          >
+            ‹
+          </button>
+
+          {/* Project card */}
+          <div className="carousel-track">
+            <div className="carousel-project-card" key={currentIndex}>
+              <div className="carousel-image-wrapper">
+                <img
+                  src={currentProject.coverImage?.url || currentProject.image}
+                  alt={currentProject.coverImage?.alt || currentProject.name}
+                  className="carousel-project-image"
+                />
+              </div>
+
+              <div className="carousel-project-content">
+                <div className="carousel-project-tags">
+                  {currentProject.tags?.map((tag, idx) => (
+                    <span key={idx} className="project-tag">{tag}</span>
+                  ))}
+                </div>
+
+                <h3 className="carousel-project-title">
+                  {currentProject.title || currentProject.name}
+                </h3>
+
+                <p className="carousel-project-description">
+                  {currentProject.description || currentProject.summary}
+                </p>
+
+                {currentProject.href && (
+                  <a
+                    href={currentProject.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="carousel-project-link"
+                  >
+                    Ver proyecto <span className="arrow">→</span>
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
-        ))}
+
+          {/* Navigation arrows */}
+          <button
+            className="carousel-nav carousel-nav-next"
+            onClick={nextProject}
+            aria-label="Proyecto siguiente"
+          >
+            ›
+          </button>
+        </div>
+
+        {/* Dots indicator */}
+        <div className="carousel-dots">
+          {data.map((_, index) => (
+            <button
+              key={index}
+              className={`carousel-dot ${index === currentIndex ? "active" : ""}`}
+              onClick={() => goToProject(index)}
+              aria-label={`Ir a proyecto ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Counter */}
+        <div className="carousel-counter">
+          {currentIndex + 1} / {data.length}
+        </div>
       </div>
-      {selected && <ProjectModal project={selected} onClose={closeModal} />}
     </section>
   );
 };
