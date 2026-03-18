@@ -41,6 +41,9 @@ const Navbar = ({ data = portfolioData.navbar }) => {
   return (
     <nav className="navbar glassy-navbar fade-in">
       <div className="nav-container">
+        <a href="mailto:perezalvarozul24@gmail.com" className="nav-cta">
+          Escribime
+        </a>
         <button
           className="nav-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -60,9 +63,6 @@ const Navbar = ({ data = portfolioData.navbar }) => {
             </a>
           ))}
         </div>
-        <a href="mailto:perezalvarozul24@gmail.com" className="nav-cta">
-          Escribime
-        </a>
       </div>
     </nav>
   );
